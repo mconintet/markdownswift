@@ -50,7 +50,7 @@ public class BlockParser: Parser {
                 } else if token == "`" {
                     return nil
                 }
-            } else if token.type == .Space {
+            } else if token.type == .Space || token.type == .Newline {
                 continue
             } else {
                 // parse paragraph
