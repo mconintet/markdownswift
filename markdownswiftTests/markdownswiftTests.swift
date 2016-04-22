@@ -106,6 +106,17 @@ class markdownswiftTests: XCTestCase {
         }
     }
 
+    func testDocumentParser() {
+        let test = readFileContent("test")
+        let scanner = Scanner(StringSource(test))
+        let parser = DocumentParser(scanner)
+        if let nodes = parser.parse(nil) {
+            print(nodes)
+        } else {
+            print("none")
+        }
+    }
+
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {

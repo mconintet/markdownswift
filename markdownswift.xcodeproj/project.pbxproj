@@ -36,6 +36,8 @@
 		438A1B621CCA16040084E78F /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1B611CCA16040084E78F /* TokenType.swift */; };
 		438A1B631CCA16170084E78F /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1B611CCA16040084E78F /* TokenType.swift */; };
 		438A1B6D1CCA63CD0084E78F /* test.md in Resources */ = {isa = PBXBuildFile; fileRef = 438A1B6B1CCA63B70084E78F /* test.md */; };
+		438A1B6F1CCA67200084E78F /* DocumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1B6E1CCA67200084E78F /* DocumentParser.swift */; };
+		438A1B701CCA67B90084E78F /* DocumentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438A1B6E1CCA67200084E78F /* DocumentParser.swift */; };
 		43930C361CC717FA0036E452 /* markdownswift.h in Headers */ = {isa = PBXBuildFile; fileRef = 43930C351CC717FA0036E452 /* markdownswift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43930C3D1CC717FA0036E452 /* markdownswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43930C321CC717FA0036E452 /* markdownswift.framework */; };
 		43930C421CC717FA0036E452 /* markdownswiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43930C411CC717FA0036E452 /* markdownswiftTests.swift */; };
@@ -89,6 +91,7 @@
 		438A1B591CCA13450084E78F /* OrderedListToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedListToken.swift; sourceTree = "<group>"; };
 		438A1B611CCA16040084E78F /* TokenType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
 		438A1B6B1CCA63B70084E78F /* test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = test.md; sourceTree = "<group>"; };
+		438A1B6E1CCA67200084E78F /* DocumentParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentParser.swift; sourceTree = "<group>"; };
 		43930C321CC717FA0036E452 /* markdownswift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = markdownswift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43930C351CC717FA0036E452 /* markdownswift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = markdownswift.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		43930C371CC717FA0036E452 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -233,6 +236,7 @@
 				437EF3C41CC8BB7F00D2031E /* HtmlElementStartParser.swift */,
 				437EF3C61CC8BB9B00D2031E /* HtmlElementEndParser.swift */,
 				438A1B4B1CCA01E40084E78F /* CodeblockMdParser.swift */,
+				438A1B6E1CCA67200084E78F /* DocumentParser.swift */,
 			);
 			path = Parsers;
 			sourceTree = "<group>";
@@ -355,6 +359,7 @@
 				438A1B501CCA12EA0084E78F /* SpaceToken.swift in Sources */,
 				43930C581CC71E500036E452 /* Token.swift in Sources */,
 				438A1B561CCA13200084E78F /* PlaintextToken.swift in Sources */,
+				438A1B6F1CCA67200084E78F /* DocumentParser.swift in Sources */,
 				438A1B621CCA16040084E78F /* TokenType.swift in Sources */,
 				438A1B4C1CCA01E40084E78F /* CodeblockMdParser.swift in Sources */,
 				438A1B521CCA13060084E78F /* NewlineToken.swift in Sources */,
@@ -398,6 +403,7 @@
 				437EF3D41CC8DBAC00D2031E /* Scanner.swift in Sources */,
 				438A1B5F1CCA152F0084E78F /* CodeblockMdToken.swift in Sources */,
 				438A1B631CCA16170084E78F /* TokenType.swift in Sources */,
+				438A1B701CCA67B90084E78F /* DocumentParser.swift in Sources */,
 				43930C781CC7B45D0036E452 /* HtmlElementParser.swift in Sources */,
 				438A1B5B1CCA15230084E78F /* SpaceToken.swift in Sources */,
 				437EF3C81CC8D38D00D2031E /* HtmlElementStartParser.swift in Sources */,
