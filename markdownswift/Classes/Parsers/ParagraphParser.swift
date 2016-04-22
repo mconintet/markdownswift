@@ -50,9 +50,32 @@ public class ParagraphParser: Parser {
                 }
             } else if currentToken() == nil || currentToken()!.type == .Newline {
                 if (token.type == .SpecialSymbol && (token == "#" || token == ">" || token == "*"))
-                || token.type == .OrderedList || token.type == .Newline || token.type == .CodeblockMd {
+                || token.type == .OrderedList || token.type == .Newline {
                     pContent.popLast()
                     break
+                } else if token.type == .Space || token.type == .CodeblockMd {
+                    var emptyLine = true
+                    beginCaptureToken()
+                    while true {
+                        guard let next = nextToken() else {
+                            break
+                        }
+                        if next.type == .Newline {
+                            break
+                        }
+                        if next.type != .Space && next.type != .CodeblockMd {
+                            emptyLine = false
+                            break
+                        }
+                    }
+                    if emptyLine {
+                        break
+                    } else {
+                        if let captured = capturedTokens() {
+                            pContent.appendContentsOf(captured)
+                        }
+                    }
+                    endCaptureToken()
                 }
                 nextToken()
                 beginCaptureToken()
@@ -79,6 +102,12 @@ public class ParagraphParser: Parser {
             }
         }
         if pContent.count > 0 {
+            while true {
+                guard let last = pContent.last where last.type == .Newline else {
+                    break
+                }
+                pContent.popLast()
+            }
             p.content = pContent
             ret.append(p)
         }
